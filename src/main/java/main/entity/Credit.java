@@ -1,7 +1,18 @@
 package main.entity;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "credit")
 public class Credit {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
+
+    @Column(name = " creditlimit")
     private int creditLimit;
+
+    @Column(name = "annualpercentofcredit")
     private long annualPercentOfCredit;
 
 

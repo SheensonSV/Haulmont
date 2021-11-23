@@ -1,8 +1,14 @@
 package main.entity;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.util.List;
 
+@Entity
+@Table(name = "bank")
 public class Bank {
+    @Column(name = "clientlist")
     private List<Client> clientList;
 
     public Bank(List<Client> clientList, List<Credit> creditList) {
